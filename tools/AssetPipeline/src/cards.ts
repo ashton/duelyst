@@ -1,5 +1,5 @@
 import { createRequire } from "node:module";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync, cpSync } from "node:fs";
 import path from "node:path";
 import type { CardMeta } from "./types";
 
@@ -35,8 +35,23 @@ function ensureCoffeeRegistered(): void {
   }
 }
 
+// `cardsLookup.coffee` itself does `require("underscore")`. That require is scoped to the
+// cloned repo's own directory tree (external/duelyst/**), which has no node_modules of its own
+// since `clone.ts` only clones the git history, never runs `npm install` there (deliberately —
+// this ~2016-era app has a large, largely-unmaintained dependency tree, and installing all of it
+// just to read one data file would be slow and fragile). Vendor just the one package it actually
+// needs by copying our own installed copy into external/duelyst/node_modules/, so Node's normal
+// upward node_modules resolution finds it from within the cloned tree.
+function ensureUnderscoreVendored(duelystRoot: string): void {
+  const target = path.join(duelystRoot, "node_modules", "underscore");
+  if (existsSync(target)) return;
+  const source = path.dirname(ownRequire.resolve("underscore/package.json"));
+  cpSync(source, target, { recursive: true });
+}
+
 export function loadCardsLookup(duelystRoot: string): Record<string, Record<string, number>> {
   ensureCoffeeRegistered();
+  ensureUnderscoreVendored(duelystRoot);
   const cardsLookupPath = path.join(duelystRoot, "app/sdk/cards/cardsLookup.coffee");
   return createRequire(cardsLookupPath)(cardsLookupPath) as Record<string, Record<string, number>>;
 }
