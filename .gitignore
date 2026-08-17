@@ -1,0 +1,28 @@
+# .NET build output
+bin/
+obj/
+*.user
+
+# Original source checkout (cloned by the asset pipeline; never committed)
+external/
+
+# Node.js
+node_modules/
+tools/AssetPipeline/dist/
+npm-debug.log*
+
+# assets/ holds only the curated vertical-slice output of the asset pipeline
+# (2 generals + 20-40 cards); it is committed via git-LFS (.gitattributes).
+# The pipeline is slice-scoped by config (pipeline.config.json `slice`), so it
+# never writes the full ~1.3 GB catalog here — that stays unregenerated until a
+# future milestone widens the slice.
+tools/AssetPipeline/.cache/
+*.log
+
+# Editor / OS
+.vs/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

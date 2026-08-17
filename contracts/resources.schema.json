@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://duelyst.fsharp/contracts/resources.schema.json",
+  "title": "ResourcesManifest",
+  "description": "alias -> descriptor, derived from the original RSX object in app/data/resources.js. The 'plist' field of the original descriptors is intentionally dropped; frame data lives in atlases.json.",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "description": "One resource descriptor, keyed by its alias (e.g. f1GeneralIdle).",
+    "required": ["kind"],
+    "additionalProperties": false,
+    "properties": {
+      "kind": { "type": "string", "enum": ["texture", "sprite", "animation", "audio"] },
+      "img": { "type": "string", "description": "Atlas/texture PNG path (relative to assets/). Required for texture/sprite/animation." },
+      "frame": { "type": "string", "description": "sprite only: frame name within the atlas." },
+      "framePrefix": { "type": "string", "description": "animation only: frames named framePrefix+index." },
+      "frameDelay": { "type": "number", "exclusiveMinimum": 0, "description": "animation only: seconds per frame." },
+      "audio": { "type": "string", "description": "audio only: sound file path (relative to assets/)." }
+    },
+    "allOf": [
+      { "if": { "properties": { "kind": { "const": "texture" } } },
+        "then": { "required": ["img"] } },
+      { "if": { "properties": { "kind": { "const": "sprite" } } },
+        "then": { "required": ["img", "frame"] } },
+      { "if": { "properties": { "kind": { "const": "animation" } } },
+        "then": { "required": ["img", "framePrefix", "frameDelay"] } },
+      { "if": { "properties": { "kind": { "const": "audio" } } },
+        "then": { "required": ["audio"] } }
+    ]
+  }
+}

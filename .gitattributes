@@ -1,0 +1,8 @@
+# Git-LFS: binary asset types committed as part of the vertical slice
+assets/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/**/*.ogg filter=lfs diff=lfs merge=lfs -text
+assets/**/*.wav filter=lfs diff=lfs merge=lfs -text
+assets/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+assets/**/*.m4a filter=lfs diff=lfs merge=lfs -text
+assets/**/fx/**/*.bin filter=lfs diff=lfs merge=lfs -text
+assets/**/*.plsprite filter=lfs diff=lfs merge=lfs -text

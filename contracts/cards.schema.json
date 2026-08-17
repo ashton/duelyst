@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://duelyst.fsharp/contracts/cards.schema.json",
+  "title": "CardCatalog",
+  "description": "Card metadata extracted from app/sdk/cards/**. Numeric ids are reused verbatim from the original cardsLookupComplete.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "faction", "cost", "cardType", "resourceIds"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": "integer", "description": "Original numeric card id (unique, reused verbatim)." },
+      "name": { "type": "string" },
+      "faction": { "type": "string" },
+      "cost": { "type": "integer", "minimum": 0 },
+      "cardType": { "type": "string", "enum": ["unit", "spell", "artifact", "general"] },
+      "atk": { "type": "integer", "description": "units/generals only." },
+      "hp": { "type": "integer", "description": "units/generals only." },
+      "rarity": { "type": "string" },
+      "race": { "type": "string" },
+      "set": { "type": "string" },
+      "resourceIds": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Aliases into resources.json (idle/attack/death sprites, sfx, portrait, etc.)."
+      },
+      "description": { "type": "string" }
+    }
+  }
+}

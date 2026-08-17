@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>fixture_v3_rotated.png</key>
+			<dict>
+				<key>textureRect</key>
+				<string>{{15,25},{50,20}}</string>
+				<key>spriteOffset</key>
+				<string>{0,0}</string>
+				<key>textureRotated</key>
+				<true/>
+				<key>spriteSourceSize</key>
+				<string>{20,50}</string>
+			</dict>
+			<key>fixture_v3_trimmed.png</key>
+			<dict>
+				<key>textureRect</key>
+				<string>{{70,25},{25,35}}</string>
+				<key>spriteOffset</key>
+				<string>{2,-4}</string>
+				<key>textureRotated</key>
+				<false/>
+				<key>spriteSourceSize</key>
+				<string>{35,45}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>3</integer>
+			<key>size</key>
+			<string>{256,256}</string>
+			<key>realTextureFileName</key>
+			<string>fixture_v3_rt.png</string>
+			<key>textureFileName</key>
+			<string>fixture_v3_rt.png</string>
+		</dict>
+	</dict>
+</plist>

@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <LangVersion>latest</LangVersion>
+    <Authors>Duelyst F# Rewrite Contributors</Authors>
+    <Product>Duelyst F#</Product>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- Dev machines here may only have a newer major runtime installed (no net9.0 runtime
+         alongside the net9.0 SDK target); roll forward so `dotnet run`/`dotnet test` still
+         execute without requiring an exact net9.0 runtime install. TFM stays net9.0. -->
+    <RollForward>LatestMajor</RollForward>
+  </PropertyGroup>
+</Project>

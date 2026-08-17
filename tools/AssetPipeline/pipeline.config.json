@@ -1,0 +1,58 @@
+{
+  "sourceRepo": "https://github.com/open-duelyst/duelyst.git",
+  "sourceCommit": "2843f2400854136598631288c2e8dfb8f5173de7",
+  "sourceDir": "../../external/duelyst",
+  "outDir": "../../assets",
+  "contractsDir": "../../contracts",
+  "slice": {
+    "description": "2 generals (Faction1/Lyonar, Faction2/Songhai) + their core-set units. Exercises texture (portraits/concept art), sprite-in-sheet (single-frame UI sprites), and animation (unit breathing/idle/walk/attack/damage/death) resource kinds.",
+    "factions": [
+      {
+        "faction": "Faction1",
+        "cardNames": [
+          "General",
+          "SilverguardSquire",
+          "WindbladeAdept",
+          "SuntideMaiden",
+          "SilverguardKnight",
+          "ArclyteSentinel",
+          "WindbladeCommander",
+          "LysianBrawler",
+          "Lightchaser",
+          "SunstoneTemplar",
+          "IroncliffeGuardian",
+          "ElyxStormblade",
+          "Sunriser",
+          "GrandmasterZir",
+          "AzuriteLion",
+          "KingsGuard"
+        ]
+      },
+      {
+        "faction": "Faction2",
+        "cardNames": [
+          "General",
+          "Heartseeker",
+          "Widowmaker",
+          "KaidoAssassin",
+          "ScarletViper",
+          "GoreHorn",
+          "OnyxBear",
+          "TuskBoar",
+          "LanternFox",
+          "JadeOgre",
+          "ChakriAvatar",
+          "MageOfFourWinds",
+          "CelestialPhantom",
+          "StormKage",
+          "HamonBlademaster",
+          "KeshraiFanblade"
+        ]
+      }
+    ],
+    "extraResourceAliases": [
+      "tile_attack",
+      "tile_board"
+    ]
+  }
+}

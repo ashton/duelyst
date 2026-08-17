@@ -1,0 +1,26 @@
+{
+  "name": "@duelyst-fsharp/asset-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Decoupled asset pipeline: clones open-duelyst, translates its Cocos2d plist atlases into project-native JSON, and publishes a committed vertical slice under assets/.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "import": "tsx src/index.ts",
+    "import:slice": "tsx src/index.ts --slice",
+    "verify": "tsx src/index.ts --verify-only",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "coffeescript": "^2.7.0",
+    "plist": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/plist": "^3.0.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "underscore": "^1.13.7",
+    "vitest": "^2.1.0"
+  }
+}

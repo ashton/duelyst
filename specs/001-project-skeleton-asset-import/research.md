@@ -1,0 +1,99 @@
+# Phase 0 Research: Project Skeleton & Reproducible Asset Import
+
+All Technical Context unknowns are resolved below. Each item: **Decision / Rationale / Alternatives**.
+
+## R1. Asset pipeline implementation language
+
+- **Decision**: Implement `tools/AssetPipeline` in **Node.js 20 LTS + TypeScript**, as a standalone tool
+  outside `Duelyst.sln`.
+- **Rationale**: The source of truth is JS/CoffeeScript — `app/data/resources.js` is a ~1.5 MB
+  `RSX = { … }` object literal, and card metadata lives in CoffeeScript factory files. Node can `require`
+  `resources.js` directly and reuse the original repo's own export tooling for cards, reading the data
+  faithfully with almost no parsing risk. npm also has mature plist parsers. TypeScript gives typed,
+  self-documenting emitters for the JSON schemas we own (`atlases.json`, `resources.json`, `cards.json`).
+- **Alternatives**: **F#/.NET** — rejected: would need an embedded JS engine or hand-parsing of a large JS
+  literal + CoffeeScript, plus re-deriving plist semantics; more code, more risk, no runtime benefit (the
+  tool never ships in the game). **Python** — viable (stdlib `plistlib` is excellent), but reading
+  `resources.js`/CoffeeScript is awkward outside Node, so a single-language Node tool is simpler overall.
+
+## R2. Obtaining the original source ("clone" vs "fixed path")
+
+- **Decision**: The pipeline **clones `open-duelyst/duelyst` at a pinned commit into the fixed conventional
+  path `external/duelyst/`**, and is **idempotent** — if a valid checkout already exists at that path it is
+  reused (and verified against the pinned commit) rather than re-cloned.
+- **Rationale**: Reconciles the user's "this should clone the original's assets" with the spec's fixed
+  conventional directory (`external/duelyst/`, gitignored). Pinning a commit SHA makes the whole extraction
+  reproducible (SC-002). Idempotency avoids re-downloading on every run.
+- **Alternatives**: **Contributor manually places source** (the earlier clarify answer) — still supported as
+  a fallback (if `external/duelyst/` is already populated, the pipeline uses it), but the default is
+  auto-clone. **Fetch a release tarball** — rejected: a git SHA is the most precise reproducibility anchor.
+- **Spec note**: This refines spec FR-001/FR-005 wording ("the contributor populates beforehand") toward
+  "the pipeline clones into the fixed path (or reuses an existing checkout)." Flagged for reconciliation; not
+  a contradiction (same fixed path).
+
+## R3. Cocos2d `.plist` → `atlases.json` translation
+
+- **Decision**: Parse each `.plist` (Apple XML property list) and emit, per atlas, a flat frame table:
+  `{ image, frames: [{ name, x, y, w, h, rotated, offsetX, offsetY, srcW, srcH }] }` keyed by atlas. Handle
+  **both plist format v2 and v3** key sets, and preserve **rotated** and **trimmed** frame metadata.
+- **Rationale**: Raylib draws a sprite from a `Texture2D` + a source `Rectangle` via `DrawTexturePro`; this
+  is the minimal, engine-native data it needs. Doing the messy Cocos2d-specific work once at build time keeps
+  XML/plist entirely out of the runtime (FR-012). `rotated` frames are packed at 90° (draw must swap w/h and
+  rotate); `offset*`/`srcW/H` capture trimming so trimmed sprites position correctly.
+- **Key format facts** (v2 vs v3): v2 uses string-encoded rects like `"{{x,y},{w,h}}"` under `frame`,
+  `offset`, `sourceSize`, plus boolean `rotated`; v3 uses `textureRect`, `spriteOffset`, `spriteSourceSize`,
+  `textureRotated`. The translator normalizes both to the same output shape. Which version open-duelyst uses
+  is detected at runtime of the tool; both paths are implemented and unit-tested.
+- **Alternatives**: Keep `.plist` and parse at runtime — rejected by FR-012 and the constitution (no
+  Cocos2d/XML in the game). Re-pack atlases from scratch with a new packer — rejected: unnecessary work and
+  visual-regression risk; we keep the original PNGs and only translate coordinates.
+
+## R4. Runtime rendering path (Raylib-cs)
+
+- **Decision**: `Duelyst.Assets` exposes a **pure** resolver `alias → (imagePath, sourceRectangle, animation
+  timing)` from `resources.json` + `atlases.json`, and an **IO** layer that `LoadTexture`s the PNG and draws
+  with `DrawTexturePro(texture, sourceRect, destRect, origin, rotation, tint)`. Rotated frames set
+  `rotation = 90°` and swap width/height in the source rect.
+- **Rationale**: Separating the pure resolver from the Raylib draw calls satisfies Functional Core / Imperative
+  Shell even inside the shell, and makes alias→rect math unit-testable without a window.
+- **Alternatives**: A single Raylib-coupled loader — rejected: untestable without a GPU/window and blurs the
+  pure/impure seam.
+
+## R5. Committed slice storage (git-LFS)
+
+- **Decision**: Track binary asset types (`*.png`, `*.ogg`, `*.wav`, fx binaries) via **git-LFS** through
+  `.gitattributes`; commit only the vertical-slice subset. The full generated set stays uncommitted
+  (gitignored) and is regenerated by the pipeline. Setup includes `git init` + `git lfs install` (this repo is
+  not yet a git repo).
+- **Rationale**: Keeps history lean as the committed set grows in later milestones; a fresh clone with LFS
+  pulled runs the app without the pipeline (SC-001). Confirmed in the /speckit-clarify session.
+- **Alternatives**: Plain git blobs — rejected: binary churn bloats history. Commit nothing (regenerate-only)
+  — rejected: breaks the "clone-and-run" onboarding the user asked for.
+
+## R6. Vertical-slice selection
+
+- **Decision**: Slice = **2 generals + ~30 cards (bounded 20–40)**. Default to two core-set factions'
+  generals plus a spread of their units/spells that exercise a texture, a sprite-in-sheet, and an animation
+  descriptor. Exact card ids are chosen in `/speckit-tasks` and pinned by numeric id (reused from the
+  original `cardsLookupComplete`).
+- **Rationale**: Smallest set that proves the whole path (copy + translate + resolve + render an animation)
+  while staying tens-of-MB for LFS. Bounded range comes straight from the spec.
+- **Alternatives**: A single asset only — rejected: too thin to exercise sprite-in-sheet vs animation
+  descriptors. Full set — rejected: 1.3 GB, out of scope.
+
+## R7. .NET / Raylib-cs / test tooling versions
+
+- **Decision**: **.NET 9** SDK; **Raylib-cs** current major (7.x, targets net8/net9) via NuGet; **Expecto** +
+  **FsCheck** for F# tests; **Vitest** for the pipeline. A `Directory.Build.props` pins `net9.0` and common
+  settings across projects.
+- **Rationale**: Matches the constitution's mandated stack; Raylib-cs 7.x is compatible with net9.0 and
+  provides `LoadTexture`/`DrawTexturePro`/window APIs needed here.
+- **Alternatives**: Silk.NET / MonoGate — rejected: constitution locks Raylib-cs. Older .NET — rejected:
+  constitution mandates .NET 9.
+
+## Open items intentionally deferred (not blocking)
+
+- Exact pinned `open-duelyst` commit SHA — captured at first setup and recorded in the pipeline config.
+- Exact plist format version present in the current open-duelyst checkout — the translator handles both v2/v3
+  regardless.
+- Cross-platform CI matrix (Windows/macOS) — Linux-first now; broaden post-slice.

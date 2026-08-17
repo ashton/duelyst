@@ -1,0 +1,1696 @@
+{
+  "f1AzuriteLionAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_azuritelion.png",
+    "framePrefix": "f1_azuritelion_attack_",
+    "frameDelay": 0.08
+  },
+  "f1AzuriteLionBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_azuritelion.png",
+    "framePrefix": "f1_azuritelion_breathing_",
+    "frameDelay": 0.13
+  },
+  "f1AzuriteLionDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_azuritelion.png",
+    "framePrefix": "f1_azuritelion_hit_",
+    "frameDelay": 0.08
+  },
+  "f1AzuriteLionDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_azuritelion.png",
+    "framePrefix": "f1_azuritelion_death_",
+    "frameDelay": 0.08
+  },
+  "f1AzuriteLionIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_azuritelion.png",
+    "framePrefix": "f1_azuritelion_idle_",
+    "frameDelay": 0.08
+  },
+  "f1AzuriteLionRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_azuritelion.png",
+    "framePrefix": "f1_azuritelion_run_",
+    "frameDelay": 0.08
+  },
+  "f1CasterAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_caster.png",
+    "framePrefix": "f1_caster_attack_",
+    "frameDelay": 0.08
+  },
+  "f1CasterBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_caster.png",
+    "framePrefix": "f1_caster_breathing_",
+    "frameDelay": 0.14
+  },
+  "f1CasterDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_caster.png",
+    "framePrefix": "f1_caster_hit_",
+    "frameDelay": 0.08
+  },
+  "f1CasterDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_caster.png",
+    "framePrefix": "f1_caster_death_",
+    "frameDelay": 0.08
+  },
+  "f1CasterIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_caster.png",
+    "framePrefix": "f1_caster_idle_",
+    "frameDelay": 0.08
+  },
+  "f1CasterRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_caster.png",
+    "framePrefix": "f1_caster_run_",
+    "frameDelay": 0.07
+  },
+  "f1CrestfallenAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_sinergyunit.png",
+    "framePrefix": "f1_sinergyunit_attack_",
+    "frameDelay": 0.08
+  },
+  "f1CrestfallenBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_sinergyunit.png",
+    "framePrefix": "f1_sinergyunit_breathing_",
+    "frameDelay": 0.12
+  },
+  "f1CrestfallenDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_sinergyunit.png",
+    "framePrefix": "f1_sinergyunit_death_",
+    "frameDelay": 0.08
+  },
+  "f1CrestfallenHit": {
+    "kind": "animation",
+    "img": "resources/units/f1_sinergyunit.png",
+    "framePrefix": "f1_sinergyunit_hit_",
+    "frameDelay": 0.08
+  },
+  "f1CrestfallenIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_sinergyunit.png",
+    "framePrefix": "f1_sinergyunit_idle_",
+    "frameDelay": 0.08
+  },
+  "f1CrestfallenRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_sinergyunit.png",
+    "framePrefix": "f1_sinergyunit_run_",
+    "frameDelay": 0.08
+  },
+  "f1ElyxStormbladeAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_elyxstormblade.png",
+    "framePrefix": "f1_elyxstormblade_attack_",
+    "frameDelay": 0.08
+  },
+  "f1ElyxStormbladeBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_elyxstormblade.png",
+    "framePrefix": "f1_elyxstormblade_breathing_",
+    "frameDelay": 0.12
+  },
+  "f1ElyxStormbladeDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_elyxstormblade.png",
+    "framePrefix": "f1_elyxstormblade_hit_",
+    "frameDelay": 0.08
+  },
+  "f1ElyxStormbladeDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_elyxstormblade.png",
+    "framePrefix": "f1_elyxstormblade_death_",
+    "frameDelay": 0.08
+  },
+  "f1ElyxStormbladeIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_elyxstormblade.png",
+    "framePrefix": "f1_elyxstormblade_idle_",
+    "frameDelay": 0.08
+  },
+  "f1ElyxStormbladeRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_elyxstormblade.png",
+    "framePrefix": "f1_elyxstormblade_run_",
+    "frameDelay": 0.08
+  },
+  "f1GeneralAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_attack_",
+    "frameDelay": 0.08
+  },
+  "f1GeneralBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_breathing_",
+    "frameDelay": 0.12
+  },
+  "f1GeneralCast": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_cast_",
+    "frameDelay": 0.08
+  },
+  "f1GeneralCastEnd": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_castend_",
+    "frameDelay": 0.08
+  },
+  "f1GeneralCastLoop": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_castloop_",
+    "frameDelay": 0.08
+  },
+  "f1GeneralCastStart": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_caststart_",
+    "frameDelay": 0.08
+  },
+  "f1GeneralDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_hit_",
+    "frameDelay": 0.08
+  },
+  "f1GeneralDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_death_",
+    "frameDelay": 0.08
+  },
+  "f1GeneralIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_idle_",
+    "frameDelay": 0.08
+  },
+  "f1GeneralRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_general.png",
+    "framePrefix": "f1_general_run_",
+    "frameDelay": 0.08
+  },
+  "f1GrandmasterZirAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_grandmasterzir.png",
+    "framePrefix": "f1_grandmasterzir_attack_",
+    "frameDelay": 0.08
+  },
+  "f1GrandmasterZirBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_grandmasterzir.png",
+    "framePrefix": "f1_grandmasterzir_breathing_",
+    "frameDelay": 0.13
+  },
+  "f1GrandmasterZirDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_grandmasterzir.png",
+    "framePrefix": "f1_grandmasterzir_hit_",
+    "frameDelay": 0.08
+  },
+  "f1GrandmasterZirDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_grandmasterzir.png",
+    "framePrefix": "f1_grandmasterzir_death_",
+    "frameDelay": 0.08
+  },
+  "f1GrandmasterZirIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_grandmasterzir.png",
+    "framePrefix": "f1_grandmasterzir_idle_",
+    "frameDelay": 0.08
+  },
+  "f1GrandmasterZirRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_grandmasterzir.png",
+    "framePrefix": "f1_grandmasterzir_run_",
+    "frameDelay": 0.08
+  },
+  "f1IroncliffeGuardianAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_ironcliffeguardian.png",
+    "framePrefix": "f1_ironcliffeguardian_attack_",
+    "frameDelay": 0.08
+  },
+  "f1IroncliffeGuardianBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_ironcliffeguardian.png",
+    "framePrefix": "f1_ironcliffeguardian_breathing_",
+    "frameDelay": 0.13
+  },
+  "f1IroncliffeGuardianDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_ironcliffeguardian.png",
+    "framePrefix": "f1_ironcliffeguardian_hit_",
+    "frameDelay": 0.08
+  },
+  "f1IroncliffeGuardianDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_ironcliffeguardian.png",
+    "framePrefix": "f1_ironcliffeguardian_death_",
+    "frameDelay": 0.08
+  },
+  "f1IroncliffeGuardianIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_ironcliffeguardian.png",
+    "framePrefix": "f1_ironcliffeguardian_idle_",
+    "frameDelay": 0.08
+  },
+  "f1IroncliffeGuardianRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_ironcliffeguardian.png",
+    "framePrefix": "f1_ironcliffeguardian_run_",
+    "frameDelay": 0.08
+  },
+  "f1MeleeAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_melee.png",
+    "framePrefix": "f1_melee_attack_",
+    "frameDelay": 0.08
+  },
+  "f1MeleeBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_melee.png",
+    "framePrefix": "f1_melee_breathing_",
+    "frameDelay": 0.12
+  },
+  "f1MeleeDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_melee.png",
+    "framePrefix": "f1_melee_hit_",
+    "frameDelay": 0.08
+  },
+  "f1MeleeDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_melee.png",
+    "framePrefix": "f1_melee_death_",
+    "frameDelay": 0.08
+  },
+  "f1MeleeIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_melee.png",
+    "framePrefix": "f1_melee_idle_",
+    "frameDelay": 0.08
+  },
+  "f1MeleeRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_melee.png",
+    "framePrefix": "f1_melee_run_",
+    "frameDelay": 0.08
+  },
+  "f1SilverguardSquireAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_silverguardsquire.png",
+    "framePrefix": "f1_silverguardsquire_attack_",
+    "frameDelay": 0.08
+  },
+  "f1SilverguardSquireBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_silverguardsquire.png",
+    "framePrefix": "f1_silverguardsquire_breathing_",
+    "frameDelay": 0.14
+  },
+  "f1SilverguardSquireDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_silverguardsquire.png",
+    "framePrefix": "f1_silverguardsquire_hit_",
+    "frameDelay": 0.08
+  },
+  "f1SilverguardSquireDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_silverguardsquire.png",
+    "framePrefix": "f1_silverguardsquire_death_",
+    "frameDelay": 0.08
+  },
+  "f1SilverguardSquireIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_silverguardsquire.png",
+    "framePrefix": "f1_silverguardsquire_idle_",
+    "frameDelay": 0.08
+  },
+  "f1SilverguardSquireRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_silverguardsquire.png",
+    "framePrefix": "f1_silverguardsquire_run_",
+    "frameDelay": 0.08
+  },
+  "f1SilvermaneVanguardAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_silvermanevanguard.png",
+    "framePrefix": "f1_silvermanevanguard_attack_",
+    "frameDelay": 0.08
+  },
+  "f1SilvermaneVanguardBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_silvermanevanguard.png",
+    "framePrefix": "f1_silvermanevanguard_breathing_",
+    "frameDelay": 0.13
+  },
+  "f1SilvermaneVanguardDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_silvermanevanguard.png",
+    "framePrefix": "f1_silvermanevanguard_hit_",
+    "frameDelay": 0.08
+  },
+  "f1SilvermaneVanguardDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_silvermanevanguard.png",
+    "framePrefix": "f1_silvermanevanguard_death_",
+    "frameDelay": 0.08
+  },
+  "f1SilvermaneVanguardIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_silvermanevanguard.png",
+    "framePrefix": "f1_silvermanevanguard_idle_",
+    "frameDelay": 0.08
+  },
+  "f1SilvermaneVanguardRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_silvermanevanguard.png",
+    "framePrefix": "f1_silvermanevanguard_run_",
+    "frameDelay": 0.08
+  },
+  "f1SpecialAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_special.png",
+    "framePrefix": "f1_special_attack_",
+    "frameDelay": 0.08
+  },
+  "f1SpecialBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_special.png",
+    "framePrefix": "f1_special_breathing_",
+    "frameDelay": 0.16
+  },
+  "f1SpecialDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_special.png",
+    "framePrefix": "f1_special_hit_",
+    "frameDelay": 0.08
+  },
+  "f1SpecialDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_special.png",
+    "framePrefix": "f1_special_death_",
+    "frameDelay": 0.08
+  },
+  "f1SpecialIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_special.png",
+    "framePrefix": "f1_special_idle_",
+    "frameDelay": 0.08
+  },
+  "f1SpecialRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_special.png",
+    "framePrefix": "f1_special_run_",
+    "frameDelay": 0.07
+  },
+  "f1SunriserAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunriser.png",
+    "framePrefix": "f1_sunriser_attack_",
+    "frameDelay": 0.08
+  },
+  "f1SunriserBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunriser.png",
+    "framePrefix": "f1_sunriser_breathing_",
+    "frameDelay": 0.13
+  },
+  "f1SunriserDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunriser.png",
+    "framePrefix": "f1_sunriser_hit_",
+    "frameDelay": 0.08
+  },
+  "f1SunriserDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunriser.png",
+    "framePrefix": "f1_sunriser_death_",
+    "frameDelay": 0.08
+  },
+  "f1SunriserIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunriser.png",
+    "framePrefix": "f1_sunriser_idle_",
+    "frameDelay": 0.08
+  },
+  "f1SunriserRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunriser.png",
+    "framePrefix": "f1_sunriser_run_",
+    "frameDelay": 0.08
+  },
+  "f1SunstoneTemplarAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunstonetemplar.png",
+    "framePrefix": "f1_sunstonetemplar_attack_",
+    "frameDelay": 0.08
+  },
+  "f1SunstoneTemplarBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunstonetemplar.png",
+    "framePrefix": "f1_sunstonetemplar_breathing_",
+    "frameDelay": 0.13
+  },
+  "f1SunstoneTemplarDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunstonetemplar.png",
+    "framePrefix": "f1_sunstonetemplar_hit_",
+    "frameDelay": 0.08
+  },
+  "f1SunstoneTemplarDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunstonetemplar.png",
+    "framePrefix": "f1_sunstonetemplar_death_",
+    "frameDelay": 0.08
+  },
+  "f1SunstoneTemplarIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunstonetemplar.png",
+    "framePrefix": "f1_sunstonetemplar_idle_",
+    "frameDelay": 0.08
+  },
+  "f1SunstoneTemplarRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_sunstonetemplar.png",
+    "framePrefix": "f1_sunstonetemplar_run_",
+    "frameDelay": 0.08
+  },
+  "f1SupportAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_support.png",
+    "framePrefix": "f1_support_attack_",
+    "frameDelay": 0.08
+  },
+  "f1SupportBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_support.png",
+    "framePrefix": "f1_support_breathing_",
+    "frameDelay": 0.12
+  },
+  "f1SupportDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_support.png",
+    "framePrefix": "f1_support_hit_",
+    "frameDelay": 0.08
+  },
+  "f1SupportDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_support.png",
+    "framePrefix": "f1_support_death_",
+    "frameDelay": 0.08
+  },
+  "f1SupportIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_support.png",
+    "framePrefix": "f1_support_idle_",
+    "frameDelay": 0.08
+  },
+  "f1SupportRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_support.png",
+    "framePrefix": "f1_support_run_",
+    "frameDelay": 0.1
+  },
+  "f1TankAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_tank.png",
+    "framePrefix": "f1_tank_attack_",
+    "frameDelay": 0.08
+  },
+  "f1TankBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_tank.png",
+    "framePrefix": "f1_tank_breathing_",
+    "frameDelay": 0.12
+  },
+  "f1TankDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_tank.png",
+    "framePrefix": "f1_tank_hit_",
+    "frameDelay": 0.08
+  },
+  "f1TankDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_tank.png",
+    "framePrefix": "f1_tank_death_",
+    "frameDelay": 0.08
+  },
+  "f1TankIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_tank.png",
+    "framePrefix": "f1_tank_idle_",
+    "frameDelay": 0.08
+  },
+  "f1TankRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_tank.png",
+    "framePrefix": "f1_tank_run_",
+    "frameDelay": 0.07
+  },
+  "f1WindbladeCommanderAttack": {
+    "kind": "animation",
+    "img": "resources/units/f1_windbladecommander.png",
+    "framePrefix": "f1_windbladecommander_attack_",
+    "frameDelay": 0.08
+  },
+  "f1WindbladeCommanderBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f1_windbladecommander.png",
+    "framePrefix": "f1_windbladecommander_breathing_",
+    "frameDelay": 0.12
+  },
+  "f1WindbladeCommanderDamage": {
+    "kind": "animation",
+    "img": "resources/units/f1_windbladecommander.png",
+    "framePrefix": "f1_windbladecommander_hurt_",
+    "frameDelay": 0.08
+  },
+  "f1WindbladeCommanderDeath": {
+    "kind": "animation",
+    "img": "resources/units/f1_windbladecommander.png",
+    "framePrefix": "f1_windbladecommander_death_",
+    "frameDelay": 0.08
+  },
+  "f1WindbladeCommanderIdle": {
+    "kind": "animation",
+    "img": "resources/units/f1_windbladecommander.png",
+    "framePrefix": "f1_windbladecommander_idle_",
+    "frameDelay": 0.08
+  },
+  "f1WindbladeCommanderRun": {
+    "kind": "animation",
+    "img": "resources/units/f1_windbladecommander.png",
+    "framePrefix": "f1_windbladecommander_run_",
+    "frameDelay": 0.08
+  },
+  "f2CasterAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_caster.png",
+    "framePrefix": "f2_caster_attack_",
+    "frameDelay": 0.08
+  },
+  "f2CasterBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_caster.png",
+    "framePrefix": "f2_caster_breathing_",
+    "frameDelay": 0.16
+  },
+  "f2CasterDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_caster.png",
+    "framePrefix": "f2_caster_hit_",
+    "frameDelay": 0.08
+  },
+  "f2CasterDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_caster.png",
+    "framePrefix": "f2_caster_death_",
+    "frameDelay": 0.08
+  },
+  "f2CasterIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_caster.png",
+    "framePrefix": "f2_caster_idle_",
+    "frameDelay": 0.08
+  },
+  "f2CasterRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_caster.png",
+    "framePrefix": "f2_caster_run_",
+    "frameDelay": 0.07
+  },
+  "f2ChakriAvatarAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_chakriavatar.png",
+    "framePrefix": "f2_chakriavatar_attack_",
+    "frameDelay": 0.08
+  },
+  "f2ChakriAvatarBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_chakriavatar.png",
+    "framePrefix": "f2_chakriavatar_breathing_",
+    "frameDelay": 0.12
+  },
+  "f2ChakriAvatarDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_chakriavatar.png",
+    "framePrefix": "f2_chakriavatar_hit_",
+    "frameDelay": 0.08
+  },
+  "f2ChakriAvatarDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_chakriavatar.png",
+    "framePrefix": "f2_chakriavatar_die_",
+    "frameDelay": 0.08
+  },
+  "f2ChakriAvatarIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_chakriavatar.png",
+    "framePrefix": "f2_chakriavatar_idle_",
+    "frameDelay": 0.08
+  },
+  "f2ChakriAvatarRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_chakriavatar.png",
+    "framePrefix": "f2_chakriavatar_run_",
+    "frameDelay": 0.08
+  },
+  "f2DeathPhantomAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_deathphantom.png",
+    "framePrefix": "f2_deathphantom_attack_",
+    "frameDelay": 0.08
+  },
+  "f2DeathPhantomBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_deathphantom.png",
+    "framePrefix": "f2_deathphantom_breath_",
+    "frameDelay": 0.12
+  },
+  "f2DeathPhantomDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_deathphantom.png",
+    "framePrefix": "f2_deathphantom_hit_",
+    "frameDelay": 0.08
+  },
+  "f2DeathPhantomDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_deathphantom.png",
+    "framePrefix": "f2_deathphantom_death_",
+    "frameDelay": 0.08
+  },
+  "f2DeathPhantomIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_deathphantom.png",
+    "framePrefix": "f2_deathphantom_idle_",
+    "frameDelay": 0.08
+  },
+  "f2DeathPhantomRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_deathphantom.png",
+    "framePrefix": "f2_deathphantom_crawl_",
+    "frameDelay": 0.08
+  },
+  "f2GeneralAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_attack_",
+    "frameDelay": 0.08
+  },
+  "f2GeneralBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_breathing_",
+    "frameDelay": 0.15
+  },
+  "f2GeneralCast": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_cast_",
+    "frameDelay": 0.08
+  },
+  "f2GeneralCastEnd": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_castend_",
+    "frameDelay": 0.08
+  },
+  "f2GeneralCastLoop": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_castloop_",
+    "frameDelay": 0.08
+  },
+  "f2GeneralCastStart": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_caststart_",
+    "frameDelay": 0.08
+  },
+  "f2GeneralDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_hit_",
+    "frameDelay": 0.08
+  },
+  "f2GeneralDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_death_",
+    "frameDelay": 0.08
+  },
+  "f2GeneralIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_idle_",
+    "frameDelay": 0.08
+  },
+  "f2GeneralRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_general.png",
+    "framePrefix": "f2_general_run_",
+    "frameDelay": 0.07
+  },
+  "f2HammonBladeseekerAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_hammonnladeseeker.png",
+    "framePrefix": "f2_hammonbladeseeker_attack_",
+    "frameDelay": 0.08
+  },
+  "f2HammonBladeseekerBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_hammonnladeseeker.png",
+    "framePrefix": "f2_hammonbladeseeker_breathing_",
+    "frameDelay": 0.12
+  },
+  "f2HammonBladeseekerDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_hammonnladeseeker.png",
+    "framePrefix": "f2_hammonbladeseeker_hit_",
+    "frameDelay": 0.08
+  },
+  "f2HammonBladeseekerDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_hammonnladeseeker.png",
+    "framePrefix": "f2_hammonbladeseeker_death_",
+    "frameDelay": 0.08
+  },
+  "f2HammonBladeseekerIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_hammonnladeseeker.png",
+    "framePrefix": "f2_hammonbladeseeker_idle_",
+    "frameDelay": 0.08
+  },
+  "f2HammonBladeseekerRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_hammonnladeseeker.png",
+    "framePrefix": "f2_hammonbladeseeker_run_",
+    "frameDelay": 0.08
+  },
+  "f2JadeOgreAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_ogremonk02.png",
+    "framePrefix": "f2_ogremonk02_attack_",
+    "frameDelay": 0.08
+  },
+  "f2JadeOgreBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_ogremonk02.png",
+    "framePrefix": "f2_ogremonk02_breathing_",
+    "frameDelay": 0.14
+  },
+  "f2JadeOgreDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_ogremonk02.png",
+    "framePrefix": "f2_ogremonk02_hurt_",
+    "frameDelay": 0.08
+  },
+  "f2JadeOgreDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_ogremonk02.png",
+    "framePrefix": "f2_ogremonk02_death_",
+    "frameDelay": 0.08
+  },
+  "f2JadeOgreIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_ogremonk02.png",
+    "framePrefix": "f2_ogremonk02_idle_",
+    "frameDelay": 0.08
+  },
+  "f2JadeOgreRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_ogremonk02.png",
+    "framePrefix": "f2_ogremonk02_run_",
+    "frameDelay": 0.08
+  },
+  "f2KeshraiFanbladeAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_keshraifanblade.png",
+    "framePrefix": "f2_keshraifanblade_attack_",
+    "frameDelay": 0.08
+  },
+  "f2KeshraiFanbladeBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_keshraifanblade.png",
+    "framePrefix": "f2_keshraifanblade_breathing_",
+    "frameDelay": 0.13
+  },
+  "f2KeshraiFanbladeDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_keshraifanblade.png",
+    "framePrefix": "f2_keshraifanblade_hit_",
+    "frameDelay": 0.08
+  },
+  "f2KeshraiFanbladeDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_keshraifanblade.png",
+    "framePrefix": "f2_keshraifanblade_death_",
+    "frameDelay": 0.08
+  },
+  "f2KeshraiFanbladeIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_keshraifanblade.png",
+    "framePrefix": "f2_keshraifanblade_idle_",
+    "frameDelay": 0.08
+  },
+  "f2KeshraiFanbladeRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_keshraifanblade.png",
+    "framePrefix": "f2_keshraifanblade_run_",
+    "frameDelay": 0.08
+  },
+  "f2LanternFoxAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_lanternfox.png",
+    "framePrefix": "f2_lanternfox_attack_",
+    "frameDelay": 0.08
+  },
+  "f2LanternFoxBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_lanternfox.png",
+    "framePrefix": "f2_lanternfox_breathing_",
+    "frameDelay": 0.13
+  },
+  "f2LanternFoxDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_lanternfox.png",
+    "framePrefix": "f2_lanternfox_hit_",
+    "frameDelay": 0.08
+  },
+  "f2LanternFoxDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_lanternfox.png",
+    "framePrefix": "f2_lanternfox_death_",
+    "frameDelay": 0.08
+  },
+  "f2LanternFoxIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_lanternfox.png",
+    "framePrefix": "f2_lanternfox_idle_",
+    "frameDelay": 0.08
+  },
+  "f2LanternFoxRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_lanternfox.png",
+    "framePrefix": "f2_lanternfox_run_",
+    "frameDelay": 0.08
+  },
+  "f2Mage4WindsAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_mage4winds.png",
+    "framePrefix": "f2_mage4winds_attack_",
+    "frameDelay": 0.08
+  },
+  "f2Mage4WindsBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_mage4winds.png",
+    "framePrefix": "f2_mage4winds_breathing_",
+    "frameDelay": 0.13
+  },
+  "f2Mage4WindsDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_mage4winds.png",
+    "framePrefix": "f2_mage4winds_hit_",
+    "frameDelay": 0.08
+  },
+  "f2Mage4WindsDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_mage4winds.png",
+    "framePrefix": "f2_mage4winds_death_",
+    "frameDelay": 0.08
+  },
+  "f2Mage4WindsIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_mage4winds.png",
+    "framePrefix": "f2_mage4winds_idle_",
+    "frameDelay": 0.08
+  },
+  "f2Mage4WindsRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_mage4winds.png",
+    "framePrefix": "f2_mage4winds_run_",
+    "frameDelay": 0.08
+  },
+  "f2MeleeAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_melee.png",
+    "framePrefix": "f2_melee_attack_",
+    "frameDelay": 0.08
+  },
+  "f2MeleeBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_melee.png",
+    "framePrefix": "f2_melee_breathing_",
+    "frameDelay": 0.13
+  },
+  "f2MeleeDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_melee.png",
+    "framePrefix": "f2_melee_hit_",
+    "frameDelay": 0.08
+  },
+  "f2MeleeDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_melee.png",
+    "framePrefix": "f2_melee_death_",
+    "frameDelay": 0.08
+  },
+  "f2MeleeIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_melee.png",
+    "framePrefix": "f2_melee_idle_",
+    "frameDelay": 0.08
+  },
+  "f2MeleeRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_melee.png",
+    "framePrefix": "f2_melee_run_",
+    "frameDelay": 0.08
+  },
+  "f2PanddoAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_panddo.png",
+    "framePrefix": "f2_panddo_attack_",
+    "frameDelay": 0.08
+  },
+  "f2PanddoBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_panddo.png",
+    "framePrefix": "f2_panddo_breathing_",
+    "frameDelay": 0.14
+  },
+  "f2PanddoDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_panddo.png",
+    "framePrefix": "f2_panddo_hit_",
+    "frameDelay": 0.08
+  },
+  "f2PanddoDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_panddo.png",
+    "framePrefix": "f2_panddo_death_",
+    "frameDelay": 0.08
+  },
+  "f2PanddoIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_panddo.png",
+    "framePrefix": "f2_panddo_idle_",
+    "frameDelay": 0.08
+  },
+  "f2PanddoRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_panddo.png",
+    "framePrefix": "f2_panddo_run_",
+    "frameDelay": 0.08
+  },
+  "f2RangedAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_ranged.png",
+    "framePrefix": "f2_ranged_attack_",
+    "frameDelay": 0.08
+  },
+  "f2RangedBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_ranged.png",
+    "framePrefix": "f2_ranged_breathing_",
+    "frameDelay": 0.14
+  },
+  "f2RangedDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_ranged.png",
+    "framePrefix": "f2_ranged_hit_",
+    "frameDelay": 0.08
+  },
+  "f2RangedDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_ranged.png",
+    "framePrefix": "f2_ranged_death_",
+    "frameDelay": 0.08
+  },
+  "f2RangedIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_ranged.png",
+    "framePrefix": "f2_ranged_idle_",
+    "frameDelay": 0.08
+  },
+  "f2RangedRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_ranged.png",
+    "framePrefix": "f2_ranged_run_",
+    "frameDelay": 0.08
+  },
+  "f2SpecialAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_special.png",
+    "framePrefix": "f2_special_attack_",
+    "frameDelay": 0.08
+  },
+  "f2SpecialBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_special.png",
+    "framePrefix": "f2_special_breathing_",
+    "frameDelay": 0.15
+  },
+  "f2SpecialDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_special.png",
+    "framePrefix": "f2_special_hit_",
+    "frameDelay": 0.08
+  },
+  "f2SpecialDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_special.png",
+    "framePrefix": "f2_special_death_",
+    "frameDelay": 0.08
+  },
+  "f2SpecialIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_special.png",
+    "framePrefix": "f2_special_idle_",
+    "frameDelay": 0.08
+  },
+  "f2SpecialRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_special.png",
+    "framePrefix": "f2_special_run_",
+    "frameDelay": 0.07
+  },
+  "f2StormKageAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_stormkage.png",
+    "framePrefix": "f2_stormkage_attack_",
+    "frameDelay": 0.08
+  },
+  "f2StormKageBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_stormkage.png",
+    "framePrefix": "f2_stormkage_breathing_",
+    "frameDelay": 0.14
+  },
+  "f2StormKageDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_stormkage.png",
+    "framePrefix": "f2_stormkage_hit_",
+    "frameDelay": 0.08
+  },
+  "f2StormKageDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_stormkage.png",
+    "framePrefix": "f2_stormkage_death_",
+    "frameDelay": 0.08
+  },
+  "f2StormKageIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_stormkage.png",
+    "framePrefix": "f2_stormkage_idle_",
+    "frameDelay": 0.08
+  },
+  "f2StormKageRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_stormkage.png",
+    "framePrefix": "f2_stormkage_run_",
+    "frameDelay": 0.08
+  },
+  "f2SupportAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_support.png",
+    "framePrefix": "f2_support_attack_",
+    "frameDelay": 0.08
+  },
+  "f2SupportBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_support.png",
+    "framePrefix": "f2_support_breathing_",
+    "frameDelay": 0.12
+  },
+  "f2SupportDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_support.png",
+    "framePrefix": "f2_support_hit_",
+    "frameDelay": 0.08
+  },
+  "f2SupportDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_support.png",
+    "framePrefix": "f2_support_death_",
+    "frameDelay": 0.08
+  },
+  "f2SupportIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_support.png",
+    "framePrefix": "f2_support_idle_",
+    "frameDelay": 0.08
+  },
+  "f2SupportRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_support.png",
+    "framePrefix": "f2_support_run_",
+    "frameDelay": 0.08
+  },
+  "f2TankAttack": {
+    "kind": "animation",
+    "img": "resources/units/f2_tank.png",
+    "framePrefix": "f2_tank_attack_",
+    "frameDelay": 0.08
+  },
+  "f2TankBreathing": {
+    "kind": "animation",
+    "img": "resources/units/f2_tank.png",
+    "framePrefix": "f2_tank_breathing_",
+    "frameDelay": 0.14
+  },
+  "f2TankDamage": {
+    "kind": "animation",
+    "img": "resources/units/f2_tank.png",
+    "framePrefix": "f2_tank_hit_",
+    "frameDelay": 0.08
+  },
+  "f2TankDeath": {
+    "kind": "animation",
+    "img": "resources/units/f2_tank.png",
+    "framePrefix": "f2_tank_death_",
+    "frameDelay": 0.08
+  },
+  "f2TankIdle": {
+    "kind": "animation",
+    "img": "resources/units/f2_tank.png",
+    "framePrefix": "f2_tank_idle_",
+    "frameDelay": 0.08
+  },
+  "f2TankRun": {
+    "kind": "animation",
+    "img": "resources/units/f2_tank.png",
+    "framePrefix": "f2_tank_run_",
+    "frameDelay": 0.07
+  },
+  "general_f1": {
+    "kind": "texture",
+    "img": "resources/generals/general_f1.png"
+  },
+  "general_f2": {
+    "kind": "texture",
+    "img": "resources/generals/general_f2.png"
+  },
+  "general_portrait_image_f1": {
+    "kind": "texture",
+    "img": "resources/generals/general_portrait_image_f1.png"
+  },
+  "general_portrait_image_f2": {
+    "kind": "texture",
+    "img": "resources/generals/general_portrait_image_f2.png"
+  },
+  "general_portrait_image_hex_f1": {
+    "kind": "texture",
+    "img": "resources/generals/general_portrait_image_hex_f1.png"
+  },
+  "general_portrait_image_hex_f2": {
+    "kind": "texture",
+    "img": "resources/generals/general_portrait_image_hex_f2.png"
+  },
+  "sfx_announcer_lyonar_1st": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_announcer_lyonar_1st.m4a"
+  },
+  "sfx_announcer_lyonar_2nd": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_announcer_lyonar_2nd.m4a"
+  },
+  "sfx_announcer_songhai_1st": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_announcer_songhai_1st.m4a"
+  },
+  "sfx_announcer_songhai_2nd": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_announcer_songhai_2nd.m4a"
+  },
+  "sfx_f1_general_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_general_attack_swing.m4a"
+  },
+  "sfx_f1_general_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_general_hit.m4a"
+  },
+  "sfx_f1_grandmasterzir_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_grandmasterzir_attack_impact.m4a"
+  },
+  "sfx_f1_grandmasterzir_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_grandmasterzir_attack_swing.m4a"
+  },
+  "sfx_f1_grandmasterzir_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_grandmasterzir_death.m4a"
+  },
+  "sfx_f1_grandmasterzir_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_grandmasterzir_hit.m4a"
+  },
+  "sfx_f1_sunriser_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_sunriser_attack_impact.m4a"
+  },
+  "sfx_f1_sunriser_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_sunriser_attack_swing.m4a"
+  },
+  "sfx_f1_sunriser_death_alt": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_sunriser_death_alt.m4a"
+  },
+  "sfx_f1_sunriser_hit_noimpact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_sunriser_hit_noimpact.m4a"
+  },
+  "sfx_f1elyxstormblade_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_elyxstormblade_attack_impact.m4a"
+  },
+  "sfx_f1elyxstormblade_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_elyxstormblade_attack_swing.m4a"
+  },
+  "sfx_f1elyxstormblade_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_elyxstormblade_death.m4a"
+  },
+  "sfx_f1elyxstormblade_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_elyxstormblade_hit.m4a"
+  },
+  "sfx_f1general_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1general_death.m4a"
+  },
+  "sfx_f1ironcliffeguardian_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_ironcliffeguardian_attack_impact.m4a"
+  },
+  "sfx_f1ironcliffeguardian_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_ironcliffeguardian_attack_swing.m4a"
+  },
+  "sfx_f1ironcliffeguardian_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_ironcliffeguardian_death.m4a"
+  },
+  "sfx_f1ironcliffeguardian_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_ironcliffeguardian_hit.m4a"
+  },
+  "sfx_f1lysianbrawler_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_silvermanevanguard_attack_impact.m4a"
+  },
+  "sfx_f1lysianbrawler_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_silvermanevanguard_attack_swing.m4a"
+  },
+  "sfx_f1lysianbrawler_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_silvermanevanguard_death.m4a"
+  },
+  "sfx_f1lysianbrawler_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_silvermanevanguard_hit.m4a"
+  },
+  "sfx_f1silverguardsquire_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_silverguardsquire_attack_impact.m4a"
+  },
+  "sfx_f1silverguardsquire_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_silverguardsquire_attack_swing.m4a"
+  },
+  "sfx_f1silverguardsquire_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_silverguardsquire_death.m4a"
+  },
+  "sfx_f1silverguardsquire_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_silverguardsquire_hit.m4a"
+  },
+  "sfx_f1tank_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1tank_attack_impact.m4a"
+  },
+  "sfx_f1tank_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1tank_attack_swing.m4a"
+  },
+  "sfx_f1tank_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1tank_death.m4a"
+  },
+  "sfx_f1tank_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1tank_hit.m4a"
+  },
+  "sfx_f1windbladecommander_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_windbladecommander_attack_swing.m4a"
+  },
+  "sfx_f1windbladecommander_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_windbladecommander_death.m4a"
+  },
+  "sfx_f1windbladecommander_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_windbladecommander_hit.m4a"
+  },
+  "sfx_f1windbladecommanderattack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f1_windbladecommander_attack_impact.m4a"
+  },
+  "sfx_f2_celestialphantom_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_celestialphantom_attack_impact.m4a"
+  },
+  "sfx_f2_celestialphantom_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_celestialphantom_attack_swing.m4a"
+  },
+  "sfx_f2_celestialphantom_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_celestialphantom_death.m4a"
+  },
+  "sfx_f2_celestialphantom_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_celestialphantom_hit.m4a"
+  },
+  "sfx_f2_chakriavatar_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_chakriavatar_attack_impact.m4a"
+  },
+  "sfx_f2_chakriavatar_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_chakriavatar_attack_swing.m4a"
+  },
+  "sfx_f2_chakriavatar_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_chakriavatar_death.m4a"
+  },
+  "sfx_f2_chakriavatar_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_chakriavatar_hit.m4a"
+  },
+  "sfx_f2_jadeogre_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_jadeogre_attack_impact.m4a"
+  },
+  "sfx_f2_jadeogre_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_jadeogre_attack_swing.m4a"
+  },
+  "sfx_f2_jadeogre_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_jadeogre_death.m4a"
+  },
+  "sfx_f2_jadeogre_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_jadeogre_hit.m4a"
+  },
+  "sfx_f2_kaidoassassin_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_kaidoassassin_attack_impact.m4a"
+  },
+  "sfx_f2_kaidoassassin_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_kaidoassassin_attack_swing.m4a"
+  },
+  "sfx_f2_kaidoassassin_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_kaidoassassin_death.m4a"
+  },
+  "sfx_f2_kaidoassassin_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_kaidoassassin_hit.m4a"
+  },
+  "sfx_f2general_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2general_attack_impact_3.m4a"
+  },
+  "sfx_f2general_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2general_attack_swing.m4a"
+  },
+  "sfx_f2general_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2general_death.m4a"
+  },
+  "sfx_f2general_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2general_hit_2.m4a"
+  },
+  "sfx_f2lanternfox_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_lanternfox_attack_impact.m4a"
+  },
+  "sfx_f2lanternfox_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_lanternfox_attack_swing.m4a"
+  },
+  "sfx_f2lanternfox_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_lanternfox_death.m4a"
+  },
+  "sfx_f2lanternfox_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_lanternfox_hit.m4a"
+  },
+  "sfx_f2mage4winds_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_mage4winds_impact.m4a"
+  },
+  "sfx_f2mage4winds_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_mage4winds_attack_swing.m4a"
+  },
+  "sfx_f2mage4winds_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_mage4winds_death.m4a"
+  },
+  "sfx_f2mage4winds_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_mage4winds_hit.m4a"
+  },
+  "sfx_f2melee_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2melee_attack_impact_1.m4a"
+  },
+  "sfx_f2melee_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2melee_attack_swing_2.m4a"
+  },
+  "sfx_f2melee_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2melee_death.m4a"
+  },
+  "sfx_f2melee_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2melee_hit_2.m4a"
+  },
+  "sfx_f2stormkage_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_mage4winds_impact.m4a"
+  },
+  "sfx_f2stormkage_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_stormkage_attack_swing.m4a"
+  },
+  "sfx_f2stormkage_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_stormkage_death.m4a"
+  },
+  "sfx_f2stormkage_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2_stormkage_hit.m4a"
+  },
+  "sfx_f2tank_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2tank_attack_impact.m4a"
+  },
+  "sfx_f2tank_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2tank_attack_swing.m4a"
+  },
+  "sfx_f2tank_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2tank_death.m4a"
+  },
+  "sfx_f2tank_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f2tank_hit_3.m4a"
+  },
+  "sfx_f6_draugarlord_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f6_draugarlord_attack_impact_.m4a"
+  },
+  "sfx_f6_icedryad_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f6_icedryad_death.m4a"
+  },
+  "sfx_f6_icedryad_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f6_icedryad_hit.m4a"
+  },
+  "sfx_f6_seismicelemental_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_f6_seismicelemental_attack_impact.m4a"
+  },
+  "sfx_neutral_arakiheadhunter_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_arakiheadhunter_hit.m4a"
+  },
+  "sfx_neutral_beastsaberspinetiger_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_beastsaberspinetiger_attack_impact.m4a"
+  },
+  "sfx_neutral_beastsaberspinetiger_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_beastsaberspinetiger_attack_swing.m4a"
+  },
+  "sfx_neutral_beastsaberspinetiger_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_beastsaberspinetiger_death.m4a"
+  },
+  "sfx_neutral_beastsaberspinetiger_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_beastsaberspinetiger_hit.m4a"
+  },
+  "sfx_neutral_gambitgirl_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_gambitgirl_attack_swing.m4a"
+  },
+  "sfx_neutral_gambitgirl_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_gambitgirl_death.m4a"
+  },
+  "sfx_neutral_golembloodshard_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_golembloodshard_hit.m4a"
+  },
+  "sfx_neutral_jaxtruesight_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_jaxtruesight_death.m4a"
+  },
+  "sfx_neutral_luxignis_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_luxignis_hit.m4a"
+  },
+  "sfx_neutral_pandora_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_pandora_death.m4a"
+  },
+  "sfx_neutral_spelljammer_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_spelljammer_attack_impact.m4a"
+  },
+  "sfx_neutral_spelljammer_death": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_spelljammer_death.m4a"
+  },
+  "sfx_neutral_spelljammer_hit": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_spelljammer_hit.m4a"
+  },
+  "sfx_neutral_stormmetalgolem_attack_impact": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_stormmetalgolem_attack_impact.m4a"
+  },
+  "sfx_neutral_stormmetalgolem_attack_swing": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_stormmetalgolem_attack_swing.m4a"
+  },
+  "sfx_singe2": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_neutral_ladylocke_attack_impact.m4a"
+  },
+  "sfx_spell_deathstrikeseal": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_spell_deathstrikeseal.m4a"
+  },
+  "sfx_spell_diretidefrenzy": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_spell_diretidefrenzy.m4a"
+  },
+  "sfx_spell_immolation_b": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_spell_immolation_b.m4a"
+  },
+  "sfx_spell_lastingjudgement": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_spell_lastingjudgement.m4a"
+  },
+  "sfx_summonlegendary": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_summonlegendary.m4a"
+  },
+  "sfx_ui_booster_packexplode": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_ui_booster_packexplode.m4a"
+  },
+  "sfx_unit_deploy": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_unit_deploy.m4a"
+  },
+  "sfx_unit_deploy_1": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_unit_deploy_1.m4a"
+  },
+  "sfx_unit_deploy_2": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_unit_deploy_2.m4a"
+  },
+  "sfx_unit_physical_4": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_unit_physical_4.m4a"
+  },
+  "sfx_unit_run_charge_4": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_unit_run_charge_4.m4a"
+  },
+  "sfx_unit_run_magical_3": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_unit_run_magical_3.m4a"
+  },
+  "sfx_unit_run_magical_4": {
+    "kind": "audio",
+    "audio": "resources/sfx/sfx_unit_run_magical_4.m4a"
+  },
+  "speech_portrait_lyonar_side": {
+    "kind": "texture",
+    "img": "resources/dialogue/speech_portrait_lyonar_side.png"
+  },
+  "speech_portrait_songhai": {
+    "kind": "texture",
+    "img": "resources/dialogue/speech_portrait_songhai.png"
+  },
+  "tile_attack": {
+    "kind": "sprite",
+    "img": "resources/tiles/tiles_action.png",
+    "frame": "tile_attack.png"
+  },
+  "tile_board": {
+    "kind": "sprite",
+    "img": "resources/tiles/tiles_board.png",
+    "frame": "tile_board.png"
+  }
+}

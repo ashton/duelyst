@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Compile Include="AtlasManifest.fs" />
+    <Compile Include="Manifest.fs" />
+    <Compile Include="AtlasLoader.fs" />
+    <Compile Include="SpriteAnimator.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Raylib-cs" Version="7.0.1" />
+  </ItemGroup>
+
+</Project>
