@@ -24,12 +24,13 @@ its header and the next `## Phase` header (or EOF), excluding any already `[X]` 
 
 ## Outline
 
-0. **Bot identity (optional).** If `CLAUDE_GH_APP_ID`, `CLAUDE_GH_APP_INSTALLATION_ID`, and
+0. **Bot identity (optional, API calls only).** If `CLAUDE_GH_APP_ID`, `CLAUDE_GH_APP_INSTALLATION_ID`, and
    `CLAUDE_GH_APP_PRIVATE_KEY_PATH` are all set, run
-   `export GH_TOKEN="$(.specify/scripts/bash/gh-app-token.sh)"` so every `gh` call below (and
-   `CLAUDE_GH_APP_SLUG` for the commit in step 6) authenticates/attributes as the GitHub App's bot identity
-   instead of the locally logged-in personal account. If any are unset, skip silently and fall back to the
-   current `gh auth` session and default `git` commit identity.
+   `export GH_TOKEN="$(.specify/scripts/bash/gh-app-token.sh)"` so every `gh` call below (PR/issue
+   management) authenticates as the GitHub App's bot identity instead of the locally logged-in personal
+   account. If any are unset, skip silently and fall back to the current `gh auth` session. This is scoped
+   to `gh` calls only — git commits always use the default local git identity (your own name/email); the
+   bot identity never appears as a commit author/committer.
 
 1. Confirm the current branch matches `story/<feature-slug>-<PhaseKey>` (the pattern `speckit-git-branch`
    creates). If it doesn't — e.g. `speckit-git-branch` aborted and `/speckit-implement` should never have
@@ -81,9 +82,14 @@ its header and the next `## Phase` header (or EOF), excluding any already `[X]` 
 6. Read `TASKS` for the phase's own title (from its `## Phase N: <Title>` header) and each completed task's
    description text (used in the commit/PR title and body).
 
-7. `git add -A && git commit -m "<PhaseKey>: <phase title>"` — if `CLAUDE_GH_APP_SLUG` and
-   `CLAUDE_GH_APP_ID` are set (bot identity configured), instead commit as the bot:
-   `git -c user.name="${CLAUDE_GH_APP_SLUG}[bot]" -c user.email="${CLAUDE_GH_APP_ID}+${CLAUDE_GH_APP_SLUG}[bot]@users.noreply.github.com" commit -m "<PhaseKey>: <phase title>"`.
+7. `git add -A && git commit -m "$(cat <<'EOF'
+<PhaseKey>: <phase title>
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+EOF
+)"` — commit author/committer stays the default local git identity (your own
+   name/email); the GitHub App bot identity (`GH_TOKEN`) is used only for the `gh` (issue/PR) calls in this
+   skill, never for commit authorship.
 
 8. `git push -u origin <branch>`.
 
