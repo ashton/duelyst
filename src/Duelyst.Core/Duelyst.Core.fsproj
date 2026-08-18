@@ -1,6 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <Compile Include="Types.fs" />
+    <Compile Include="Rng.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 
