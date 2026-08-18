@@ -1,7 +1,7 @@
 ---
 name: "speckit-pr-sync"
-description: "Check the current feature's open task PR(s) for review feedback, address comments, or merge on approval and report the next task"
-argument-hint: "Optional task ID (e.g. T004) to sync just that one PR; omit to sync every open task/<feature>-T* PR"
+description: "Check the current feature's open phase PR(s) for review feedback, address comments, or merge on approval and report the next phase"
+argument-hint: "Optional phase key (e.g. US1, Foundational) to sync just that one PR; omit to sync every open story/<feature>-* PR"
 metadata:
   author: "project-custom"
 user-invocable: true
@@ -11,18 +11,19 @@ disable-model-invocation: false
 ## Purpose
 
 The manual review-loop step of the branch → PR → review-loop → merge workflow. Run this after leaving (or
-expecting) review comments on a task PR opened by `speckit-git-pr`, or after approving one. It does exactly
-one of: push a fix for outstanding feedback, merge an approved PR, or report there's nothing to do yet —
-never more than one PR-affecting action per PR per invocation, and never auto-starts `/speckit-implement`
-for the next task (that stays a manual, separate step by design).
+expecting) review comments on a phase PR opened by `speckit-git-pr`, or after approving one. It does
+exactly one of: push a fix for outstanding feedback, merge an approved PR, or report there's nothing to do
+yet — never more than one PR-affecting action per PR per invocation, and never auto-starts
+`/speckit-implement` for the next phase (that stays a manual, separate step by design).
 
 ## Outline
 
-0. **Bot identity (optional).** If `CLAUDE_GH_APP_ID`, `CLAUDE_GH_APP_INSTALLATION_ID`, and `CLAUDE_GH_APP_PRIVATE_KEY_PATH` are
-   all set, run `export GH_TOKEN="$(.specify/scripts/bash/gh-app-token.sh)"` so every `gh`/`gh api` call
-   below (and `CLAUDE_GH_APP_SLUG` for the fix commit in step 3d) authenticates/attributes as the GitHub App's bot
-   identity instead of the locally logged-in personal account. If any are unset, skip silently and fall back
-   to the current `gh auth` session and default `git` commit identity.
+0. **Bot identity (optional).** If `CLAUDE_GH_APP_ID`, `CLAUDE_GH_APP_INSTALLATION_ID`, and
+   `CLAUDE_GH_APP_PRIVATE_KEY_PATH` are all set, run
+   `export GH_TOKEN="$(.specify/scripts/bash/gh-app-token.sh)"` so every `gh`/`gh api` call below (and
+   `CLAUDE_GH_APP_SLUG` for the fix commit in step 3d) authenticates/attributes as the GitHub App's bot
+   identity instead of the locally logged-in personal account. If any are unset, skip silently and fall
+   back to the current `gh auth` session and default `git` commit identity.
 
 1. Resolve `FEATURE_DIR` via `.specify/scripts/bash/check-prerequisites.sh --json --paths-only`; let
    `feature-slug` = `basename "$FEATURE_DIR"`. Resolve the GitHub repo via
@@ -30,11 +31,11 @@ for the next task (that stays a manual, separate step by design).
    `speckit-taskstoissues` uses).
 
 2. Determine which PR(s) are in scope:
-   - If an argument like `T004` was given: scope to branch `task/<feature-slug>-T004` only.
-   - If no argument: `gh pr list --repo <owner>/<repo> --head "task/<feature-slug>-" --state open --json
-     number,url,headRefName` — note this needs a client-side filter (`gh pr list --head` matches an exact
-     branch, not a prefix), so instead list all open PRs and filter for `headRefName` starting with
-     `task/<feature-slug>-`. If none are found, report "no open task PRs for this feature" and stop.
+   - If an argument like `US1` was given: scope to branch `story/<feature-slug>-US1` only.
+   - If no argument: `gh pr list --repo <owner>/<repo> --state open --json number,url,headRefName` and
+     filter client-side for `headRefName` starting with `story/<feature-slug>-` (`gh pr list --head`
+     matches an exact branch, not a prefix). If none are found, report "no open phase PRs for this
+     feature" and stop.
 
 3. For **each** PR in scope, independently:
 
@@ -45,9 +46,13 @@ for the next task (that stays a manual, separate step by design).
    c. **If `reviewDecision == "APPROVED"`**:
       - `gh pr merge <N> --repo <owner>/<repo> --squash --delete-branch`.
       - `git checkout main && git pull --ff-only origin main`.
-      - Report the merge succeeded (with the task ID and issue closed).
-      - Parse `tasks.md` for the first remaining `- [ ] T###` line and report it as the suggested next task
-        — **do not** invoke `/speckit-implement` automatically; just name it.
+      - Extract `PhaseKey` from `headRefName` and report the merge succeeded, naming the phase and how many
+        issues it closed.
+      - Resolve `TASKS` via `.specify/scripts/bash/check-prerequisites.sh --json --paths-only`, parse every
+        `## Phase N: <Title>` header (same key-derivation rules as `speckit-git-branch`/`speckit-git-pr`:
+        `US<N>` if the title contains `User Story (\d+)`, else the title's first word), and find the first
+        phase (in file order) with a non-empty remaining-unchecked-task set. Report it as the suggested next
+        phase, with its task range — **do not** invoke `/speckit-implement` automatically; just name it.
 
    d. **Else if there are unresolved review comments or a "changes requested" review** (a `reviews[]` entry
       with `state == "CHANGES_REQUESTED"`, or any comments not clearly superseded by a later commit):
@@ -56,15 +61,15 @@ for the next task (that stays a manual, separate step by design).
       - `git fetch origin && git checkout <headRefName>`.
       - Make the requested change(s) directly on that branch — read the comment(s) carefully, locate the
         referenced file/line, and fix exactly what was asked; re-run whatever test/build command is
-        relevant to confirm the fix (mirror what the original task's PR verification used).
-      - `git add -A && git commit -m "Address review feedback on <task-id>"` — if `CLAUDE_GH_APP_SLUG` and
-        `CLAUDE_GH_APP_ID` are set (bot identity configured), instead commit as the bot:
-        `git -c user.name="${CLAUDE_GH_APP_SLUG}[bot]" -c user.email="${CLAUDE_GH_APP_ID}+${CLAUDE_GH_APP_SLUG}[bot]@users.noreply.github.com" commit -m "Address review feedback on <task-id>"`.
+        relevant to confirm the fix (mirror what the original phase's PR verification used).
+      - `git add -A && git commit -m "Address review feedback on <phase-key>"` — if `CLAUDE_GH_APP_SLUG`
+        and `CLAUDE_GH_APP_ID` are set (bot identity configured), instead commit as the bot:
+        `git -c user.name="${CLAUDE_GH_APP_SLUG}[bot]" -c user.email="${CLAUDE_GH_APP_ID}+${CLAUDE_GH_APP_SLUG}[bot]@users.noreply.github.com" commit -m "Address review feedback on <phase-key>"`.
       - `git push` (updates the same open PR — never open a new one here).
       - Report what was changed and that the PR was updated.
 
-   e. **Else** (no reviews yet, nothing actionable): report "no feedback yet on <task-id>'s PR" and move to
-      the next PR in scope without changing anything.
+   e. **Else** (no reviews yet, nothing actionable): report "no feedback yet on <phase-key>'s PR" and move
+      to the next PR in scope without changing anything.
 
 4. After processing all PRs in scope, give a one-line summary per PR (merged / fix pushed / nothing to do).
 
@@ -80,5 +85,5 @@ for the next task (that stays a manual, separate step by design).
 
 - [ ] Every PR in scope was checked exactly once and got exactly one outcome (merged, fix pushed, nothing
   to do, or skipped-with-reason).
-- [ ] Any merge was followed by reporting the next unimplemented task, without auto-invoking
+- [ ] Any merge was followed by reporting the next phase with remaining work, without auto-invoking
   `/speckit-implement`.
