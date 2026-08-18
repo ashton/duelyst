@@ -4,6 +4,6 @@ open Expecto
 
 [<EntryPoint>]
 let main argv =
-    let allTests = testList "Duelyst.Core" [ RngTests.tests ]
+    let allTests = testList "Duelyst.Core" [ RngTests.tests; GameStateTests.tests ]
 
     runTestsWithCLIArgs [] argv allTests
