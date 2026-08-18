@@ -1,0 +1,11 @@
+hooks:
+  before_implement:
+    - command: speckit.git.branch
+      description: "Hard gate: requires /speckit-implement to have been invoked with exactly one task ID; creates a dedicated branch for that task before any files change; aborts (no branch, no implementation) otherwise"
+      optional: false
+      enabled: true
+  after_implement:
+    - command: speckit.git.pr
+      description: "Commit this task's changes, push, and open a GitHub PR closing its tracking issue"
+      optional: false
+      enabled: true
