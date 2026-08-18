@@ -47,7 +47,7 @@ rule is written as a failing Expecto test (or FsCheck property) before its imple
 
 **⚠️ CRITICAL**: Must complete before any user story.
 
-- [ ] T004 [P] Implement `PlayerId`, `EntityId`, `CardId`, `Position`, `Rng` (seeded PRNG: `next`,
+- [X] T004 [P] Implement `PlayerId`, `EntityId`, `CardId`, `Position`, `Rng` (seeded PRNG: `next`,
   `shuffle`) in `src/Duelyst.Core/Types.fs` and `src/Duelyst.Core/Rng.fs`
 - [ ] T005 [P] Define the rules constants module (board 9×5, `MaxMana=9`, `StartingMana=2`,
   `MaxHandSize=6`, `StartingHandSize=5`, mulligan replace count 2, movement range 2, fatigue damage
