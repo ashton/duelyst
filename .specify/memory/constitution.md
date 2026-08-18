@@ -1,22 +1,19 @@
 <!--
 SYNC IMPACT REPORT
-Version change: (unratified template) → 1.0.0
-Rationale: Initial ratification. The prior file was the unfilled scaffold; this is the first
-concrete constitution, so the version starts at 1.0.0 (MAJOR).
+Version change: 1.0.0 → 1.1.0
+Rationale: MINOR — materially changed guidance to an existing Technology & Architecture Constraint
+(target runtime moved from .NET 9 to .NET 10, SDK 10.0.300), not a principle addition/removal or
+redefinition. All five Core Principles, the testing stack, and the renderer choice are unchanged.
 
-Principles (all newly defined from placeholders):
-  - [PRINCIPLE_1_NAME] → I. Domain-First Modeling
-  - [PRINCIPLE_2_NAME] → II. Test-First Development (NON-NEGOTIABLE)
-  - [PRINCIPLE_3_NAME] → III. Functional Core / Imperative Shell
-  - [PRINCIPLE_4_NAME] → IV. Immediate-Mode UI with TEA (No Stateful Components)
-  - [PRINCIPLE_5_NAME] → V. Designed for Evolution (Simplicity & YAGNI)
+Principles: no changes this amendment.
 
 Sections:
-  - Added: Core Principles (5), Technology & Architecture Constraints, Development Workflow,
-    Governance
+  - Modified: Technology & Architecture Constraints — "Language and runtime: .NET 9, F#" →
+    ".NET 10 (SDK 10.0.300), F#"
+  - Added: none
   - Removed: none
 
-Deferred TODOs: none. RATIFICATION_DATE set to 2026-08-16 (greenfield project initialized today).
+Deferred TODOs: none.
 
 Runtime guidance file referenced by Governance: docs/planning.md
 -->
@@ -92,7 +89,7 @@ case data-driven and the structure minimal is what keeps evolution cheap and hon
 
 ## Technology & Architecture Constraints
 
-- Language and runtime: **.NET 9, F#**.
+- Language and runtime: **.NET 10 (SDK 10.0.300), F#**.
 - Renderer and shell: **Raylib-cs**; the sprite-animation, UI, and particle layers are built on top
   of it and confined to the shell.
 - Testing stack: **Expecto + FsCheck**.
@@ -130,4 +127,4 @@ constitution wins.
   rationale or fixed before merge; unjustified complexity is grounds to reject.
 - Runtime development guidance and architecture detail live in `docs/planning.md`.
 
-**Version**: 1.0.0 | **Ratified**: 2026-08-16 | **Last Amended**: 2026-08-16
+**Version**: 1.1.0 | **Ratified**: 2026-08-16 | **Last Amended**: 2026-08-17

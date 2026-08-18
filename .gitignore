@@ -26,3 +26,6 @@ tools/AssetPipeline/.cache/
 *.swp
 .DS_Store
 Thumbs.db
+
+# specify CLI's local extension-catalog cache (machine-local, not project state)
+.specify/extensions/

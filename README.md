@@ -1,6 +1,6 @@
 # Duelyst F#
 
-A native desktop reimplementation of [Duelyst](https://github.com/open-duelyst/duelyst) in F# / .NET 9,
+A native desktop reimplementation of [Duelyst](https://github.com/open-duelyst/duelyst) in F# / .NET 10,
 reusing the original's CC0-licensed art, audio, cards, and champions on a new functional-core /
 imperative-shell architecture. See [`docs/planning.md`](docs/planning.md) for the full architecture and
 build plan, and [`specs/001-project-skeleton-asset-import/`](specs/001-project-skeleton-asset-import/) for
@@ -11,7 +11,7 @@ this milestone's spec, plan, and design docs.
 The vertical-slice assets (2 generals + 20-40 cards) are committed via git-LFS, so the app runs without
 importing anything.
 
-**Prerequisites**: [.NET 9 SDK](https://dotnet.microsoft.com/download), `git`, [`git-lfs`](https://git-lfs.com/).
+**Prerequisites**: [.NET 10 SDK](https://dotnet.microsoft.com/download), `git`, [`git-lfs`](https://git-lfs.com/).
 
 ```bash
 git lfs install
