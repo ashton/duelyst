@@ -149,6 +149,12 @@ closes cleanly; `dotnet test` is green.
 
 ---
 
+## Phase 7: Convergence
+
+- [ ] T042 On a machine (or CI runner) with a real or virtual (Xvfb) display, run `dotnet run --project src/Duelyst.Client`, visually confirm an imported sprite renders on screen within 10 seconds, confirm the window closes cleanly on close, and record the result in `docs/planning.md`'s M0 status notes and `tasks.md` T037/T038, closing out the open item per SC-004 (partial)
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase dependencies
