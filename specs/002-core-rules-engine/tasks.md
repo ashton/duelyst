@@ -84,51 +84,64 @@ no invariant is violated along the way.
 
 ### Tests for User Story 1 (write first, MUST fail) ⚠️
 
-- [ ] T009 [P] [US1] Write failing Expecto tests for mana ramp (`StartTurn`/`Refresh`: cap +1 up to
+- [X] T009 [P] [US1] Write failing Expecto tests for mana ramp (`StartTurn`/`Refresh`: cap +1 up to
   `MaxMana`, mana refills to cap) and mulligan (replace ≤ allowed count; over-selection rejected with
   `TooManyMulligans`) in `tests/Duelyst.Core.Tests/GameStateTests.fs`
-- [ ] T010 [P] [US1] Write failing Expecto tests for summon-near-friendly legality (adjacent-to-friendly
+- [X] T010 [P] [US1] Write failing Expecto tests for summon-near-friendly legality (adjacent-to-friendly
   accepted; occupied/out-of-bounds/no-friendly-adjacent rejected with the matching `InvalidReason`) in
   `tests/Duelyst.Core.Tests/SummonTests.fs`
-- [ ] T011 [P] [US1] Write failing Expecto tests for `Board.isReachable` (BFS through unoccupied tiles,
+- [X] T011 [P] [US1] Write failing Expecto tests for `Board.isReachable` (BFS through unoccupied tiles,
   range 2; blocked/out-of-range rejected) and `MoveUnit` legality/`HasMoved` tracking in
   `tests/Duelyst.Core.Tests/MoveTests.fs`
-- [ ] T012 [P] [US1] Write failing Expecto tests for attack + counterattack (both units damaged unless
+- [X] T012 [P] [US1] Write failing Expecto tests for attack + counterattack (both units damaged unless
   defender destroyed), exhaustion (`AlreadyActed` on a second attack), and summoning sickness
   (`SummoningSickness` on the turn a unit is summoned) in `tests/Duelyst.Core.Tests/AttackTests.fs`
-- [ ] T013 [P] [US1] Write failing Expecto tests for general-death win/draw detection (single-general
+- [X] T013 [P] [US1] Write failing Expecto tests for general-death win/draw detection (single-general
   death → `Win` for the opponent; simultaneous double death → `Draw`; `GameAlreadyEnded` rejects further
   actions), and for fatigue-on-empty-deck / burn-on-full-hand `DrawCard` outcomes, in
   `tests/Duelyst.Core.Tests/WinConditionTests.fs`
 
 ### Implementation for User Story 1
 
-- [ ] T014 [US1] Implement `Board.hasFriendlyAdjacent` and `Board.isReachable` (BFS over unoccupied,
+- [X] T014 [US1] Implement `Board.hasFriendlyAdjacent` and `Board.isReachable` (BFS over unoccupied,
   in-bounds tiles) in `src/Duelyst.Core/Board.fs` to pass T010/T011
-- [ ] T015 [US1] Implement `Pipeline.validate` for `PlayCard`/`MoveUnit`/`Attack`/`Mulligan`/`EndTurn`
+- [X] T015 [US1] Implement `Pipeline.validate` for `PlayCard`/`MoveUnit`/`Attack`/`Mulligan`/`EndTurn`
   (turn ownership, mana cost, summon/move/attack legality per T010–T013's `InvalidReason`s,
-  `GameAlreadyEnded` once `Outcome <> InProgress`) in `src/Duelyst.Core/Pipeline.fs`
-- [ ] T016 [US1] Implement `Pipeline.modifyForExecution` as identity (no modifiers alter actions this
+  `GameAlreadyEnded` once `Outcome <> InProgress`) in `src/Duelyst.Core/Pipeline.fs` — reuses
+  `NotInAttackRange` for attacking a friendly unit (no dedicated `InvalidReason` case exists, and the DU
+  is additive-only/already merged) and `UnknownCard` for a mulligan card not actually in hand (same
+  reasoning); `PlayCard` does not check hand membership (no `InvalidReason` case or task text calls for
+  it — mana/target legality is what's specified)
+- [X] T016 [US1] Implement `Pipeline.modifyForExecution` as identity (no modifiers alter actions this
   milestone, per plan.md) in `src/Duelyst.Core/Pipeline.fs`
-- [ ] T017 [US1] Implement `Pipeline.apply` for player-initiated actions (`PlayCard`→`Summon`,
+- [X] T017 [US1] Implement `Pipeline.apply` for player-initiated actions (`PlayCard`→`Summon`,
   `MoveUnit`, `Attack`→counterattack `Damage`s, `Mulligan`, `EndTurn`→`StartTurn`/`Refresh`/`DrawCard`)
-  to pass T009–T012, producing the matching `Event`s in `src/Duelyst.Core/Pipeline.fs`
-- [ ] T018 [US1] Implement `Pipeline.apply` for system-derived actions (`Damage` with fatigue-on-empty-
+  to pass T009–T012, producing the matching `Event`s in `src/Duelyst.Core/Pipeline.fs` — added a private
+  `CardStats` fixture lookup (`CardId -> Cost/Atk/Hp`) since `PlayCard`/`Summon` need stats `contracts/
+  core-pipeline.md`'s Non-goals explicitly permits ("a minimal in-core lookup", Constitution III forbids
+  reading `assets/cards.json` from IO-free `Duelyst.Core`)
+- [X] T018 [US1] Implement `Pipeline.apply` for system-derived actions (`Damage` with fatigue-on-empty-
   deck and general-death detection setting `Outcome`, `Heal`, `Summon`, `Kill` removing a dead entity
   from `Board`/`Entities`, `ApplyModifier`/`RemoveModifier`, `DrawCard` with hand-cap burn, `StartTurn`,
   `Refresh` resetting `Exhausted`/`HasMoved`/`SummonedThisTurn`) to pass T013 in
-  `src/Duelyst.Core/Pipeline.fs`
-- [ ] T019 [US1] Implement `Pipeline.triggers : GameState -> Event list -> Action list` as the inert,
+  `src/Duelyst.Core/Pipeline.fs` — `Outcome`-setting itself lives in `step`'s `checkOutcome` (runs once
+  after the whole resolution, per data-model.md's `step` behavior notes), not inside `Damage`/`Kill`'s
+  `apply` cases
+- [X] T019 [US1] Implement `Pipeline.triggers : GameState -> Event list -> Action list` as the inert,
   always-`[]` stage (per research.md R5) in `src/Duelyst.Core/Pipeline.fs`
-- [ ] T020 [US1] Implement `Pipeline.step` (validate → modifyForExecution → apply → triggers, draining
+- [X] T020 [US1] Implement `Pipeline.step` (validate → modifyForExecution → apply → triggers, draining
   follow-up actions via `apply` until the queue is empty, checking/setting `Outcome` after every `apply`)
   in `src/Duelyst.Core/Pipeline.fs`
-- [ ] T021 [US1] Implement the headless scripted-match harness (`playTurn`, `scriptedMatch` helpers over
+- [X] T021 [US1] Implement the headless scripted-match harness (`playTurn`, `scriptedMatch` helpers over
   `step`) driving a full match from `GameState.init` through mulligan, mana ramp, summon, move, attack +
   counterattack, to a general's death, asserting `Outcome = Win _` and no invariant violation, in
-  `tests/Duelyst.Core.Tests/ScriptedMatchHarness.fs` (FR-017, SC-001, SC-006)
-- [ ] T022 [US1] Run `dotnet test tests/Duelyst.Core.Tests`, confirm all US1 tests (T009–T013,
-  T021) are green, and record the result
+  `tests/Duelyst.Core.Tests/ScriptedMatchHarness.fs` (FR-017, SC-001, SC-006) — uses deliberately small
+  general HP (4, not 25) so the scripted match is a handful of turns to read/run, not the dozens a
+  realistic-HP grind would need; proves the same pipeline mechanics regardless of magnitude
+- [X] T022 [US1] Run `dotnet test tests/Duelyst.Core.Tests`, confirm all US1 tests (T009–T013,
+  T021) are green, and record the result — 41/41 green via both `dotnet test` (VSTest) and
+  `dotnet run --project tests/Duelyst.Core.Tests` (native Expecto runner); `dotnet build Duelyst.sln`
+  clean, 0 warnings, 0 errors, all 7 projects
 
 **Checkpoint**: US1 delivers a fully playable headless match through `step` — independently shippable MVP.
 
