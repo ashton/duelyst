@@ -28,7 +28,7 @@ rule is written as a failing Expecto test (or FsCheck property) before its imple
 
 **Purpose**: Wire the new `Duelyst.Core.Tests` project into the existing solution; no rule logic yet.
 
-- [ ] T001 Create `tests/Duelyst.Core.Tests/Duelyst.Core.Tests.fsproj` (Expecto + FsCheck, references
+- [X] T001 Create `tests/Duelyst.Core.Tests/Duelyst.Core.Tests.fsproj` (Expecto + FsCheck, references
   `src/Duelyst.Core/Duelyst.Core.fsproj`) and a minimal `tests/Duelyst.Core.Tests/Program.fs` Expecto
   entry point
 - [ ] T002 Add `tests/Duelyst.Core.Tests/Duelyst.Core.Tests.fsproj` and confirm
