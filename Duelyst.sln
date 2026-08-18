@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Duelyst.Assets.Tests", "tests\Duelyst.Assets.Tests\Duelyst.Assets.Tests.fsproj", "{2DF38085-675A-46E5-9EB3-6188BEBED8C1}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Duelyst.Core.Tests", "tests\Duelyst.Core.Tests\Duelyst.Core.Tests.fsproj", "{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,18 @@ Global
 		{2DF38085-675A-46E5-9EB3-6188BEBED8C1}.Release|x64.Build.0 = Release|Any CPU
 		{2DF38085-675A-46E5-9EB3-6188BEBED8C1}.Release|x86.ActiveCfg = Release|Any CPU
 		{2DF38085-675A-46E5-9EB3-6188BEBED8C1}.Release|x86.Build.0 = Release|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Debug|x64.Build.0 = Debug|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Debug|x86.Build.0 = Debug|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Release|x64.ActiveCfg = Release|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Release|x64.Build.0 = Release|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Release|x86.ActiveCfg = Release|Any CPU
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,5 +126,6 @@ Global
 		{BB4A8193-8F6E-427C-AFE5-DB71E8029D97} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{3ADFDDC3-053B-42CB-A433-17A38708C88D} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{2DF38085-675A-46E5-9EB3-6188BEBED8C1} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{9E53BDB3-FDDD-4FF7-AFEF-E3F247947AFA} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 EndGlobal
