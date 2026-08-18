@@ -33,7 +33,7 @@ rule is written as a failing Expecto test (or FsCheck property) before its imple
   entry point
 - [X] T002 Add `tests/Duelyst.Core.Tests/Duelyst.Core.Tests.fsproj` and confirm
   `src/Duelyst.Core/Duelyst.Core.fsproj` are both wired into `Duelyst.sln`
-- [ ] T003 Confirm `dotnet build Duelyst.sln` and `dotnet test tests/Duelyst.Core.Tests` both run
+- [X] T003 Confirm `dotnet build Duelyst.sln` and `dotnet test tests/Duelyst.Core.Tests` both run
   (0 tests, green) before any rule code is written
 
 **Checkpoint**: Empty but wired test project — ready for foundational types.
