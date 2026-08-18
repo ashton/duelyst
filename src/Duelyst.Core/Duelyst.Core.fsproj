@@ -3,6 +3,9 @@
   <ItemGroup>
     <Compile Include="Types.fs" />
     <Compile Include="Rng.fs" />
+    <Compile Include="Rules.fs" />
+    <Compile Include="Actions.fs" />
+    <Compile Include="GameState.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 

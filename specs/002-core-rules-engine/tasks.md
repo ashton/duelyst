@@ -49,16 +49,23 @@ rule is written as a failing Expecto test (or FsCheck property) before its imple
 
 - [X] T004 [P] Implement `PlayerId`, `EntityId`, `CardId`, `Position`, `Rng` (seeded PRNG: `next`,
   `shuffle`) in `src/Duelyst.Core/Types.fs` and `src/Duelyst.Core/Rng.fs`
-- [ ] T005 [P] Define the rules constants module (board 9×5, `MaxMana=9`, `StartingMana=2`,
+- [X] T005 [P] Define the rules constants module (board 9×5, `MaxMana=9`, `StartingMana=2`,
   `MaxHandSize=6`, `StartingHandSize=5`, mulligan replace count 2, movement range 2, fatigue damage
   amount) in `src/Duelyst.Core/Rules.fs`
-- [ ] T006 [P] Implement `Modifier`, `Entity`, `PlayerState`, `GameState`, `Outcome` records in
-  `src/Duelyst.Core/GameState.fs`
-- [ ] T007 [P] Implement `Action`, `Event`, `InvalidReason` discriminated unions in
+- [X] T006 [P] Implement `Modifier`, `Entity`, `PlayerState`, `GameState`, `Outcome` records in
+  `src/Duelyst.Core/GameState.fs` — `Modifier`/`Outcome` moved to `Types.fs` instead (both `Actions.fs`
+  and `GameState.fs` need them, and `GameState` also needs `Action` for its `History` field, so putting
+  `Modifier`/`Outcome` in `GameState.fs` would make `GameState.fs` and `Actions.fs` depend on each other,
+  which F#'s file-order compilation can't express); `Entity`/`PlayerState`/`GameState` stayed in
+  `GameState.fs` as specified
+- [X] T007 [P] Implement `Action`, `Event`, `InvalidReason` discriminated unions in
   `src/Duelyst.Core/Actions.fs`
-- [ ] T008 Write failing Expecto tests for `GameState.init` (board/players/generals placed, starting
+- [X] T008 Write failing Expecto tests for `GameState.init` (board/players/generals placed, starting
   hand/mana/deck per `Rules` constants, seeded `Rng`) in `tests/Duelyst.Core.Tests/GameStateTests.fs`,
-  then implement `GameState.init` in `src/Duelyst.Core/GameState.fs` to pass them
+  then implement `GameState.init` in `src/Duelyst.Core/GameState.fs` to pass them — `init`'s concrete
+  signature (`seed -> PlayerSetup -> PlayerSetup -> GameState`, with a new `PlayerSetup` record for
+  general card/stats/deck) was decided during implementation since `contracts/core-pipeline.md`'s
+  `init` signature didn't account for needing each general's card/stats
 
 **Checkpoint**: Domain types compile and `GameState.init` is tested — user story work can begin.
 
