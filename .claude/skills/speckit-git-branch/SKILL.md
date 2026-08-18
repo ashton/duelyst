@@ -21,6 +21,12 @@ was explicitly given.
 
 ## Outline
 
+0. **Bot identity (optional).** If `CLAUDE_GH_APP_ID`, `CLAUDE_GH_APP_INSTALLATION_ID`, and `CLAUDE_GH_APP_PRIVATE_KEY_PATH` are
+   all set, run `export GH_TOKEN="$(.specify/scripts/bash/gh-app-token.sh)"` so every `gh` call below
+   authenticates as the GitHub App's bot identity instead of the locally logged-in personal account. If any
+   of those three env vars are unset, skip this silently — `gh` falls back to the existing `gh auth` session
+   (your personal account) so the workflow keeps working before the App is configured.
+
 1. **Determine the task ID.** Inspect the arguments the user passed to the `/speckit-implement` invocation
    currently in progress in this conversation (the text after `/speckit-implement`). Extract every distinct
    token matching `T\d{3}` from it.

@@ -17,6 +17,12 @@ completing the one-task/one-branch/one-PR/one-issue invariant `speckit-git-branc
 
 ## Outline
 
+0. **Bot identity (optional).** If `CLAUDE_GH_APP_ID`, `CLAUDE_GH_APP_INSTALLATION_ID`, and `CLAUDE_GH_APP_PRIVATE_KEY_PATH` are
+   all set, run `export GH_TOKEN="$(.specify/scripts/bash/gh-app-token.sh)"` so every `gh` call below (and
+   `CLAUDE_GH_APP_SLUG` for the commit in step 7) authenticates/attributes as the GitHub App's bot identity instead
+   of the locally logged-in personal account. If any are unset, skip silently and fall back to the current
+   `gh auth` session and default `git` commit identity.
+
 1. Confirm the current branch matches `task/<feature-slug>-T###` (the pattern `speckit-git-branch`
    creates). If it doesn't — e.g. `speckit-git-branch` aborted and `/speckit-implement` should never have
    reached its Outline, but is somehow still running — abort loudly: report that there's no task branch to
@@ -60,7 +66,9 @@ completing the one-task/one-branch/one-PR/one-issue invariant `speckit-git-branc
 
 6. Read the task's own line in `tasks.md` for its description text (used in the commit/PR title).
 
-7. `git add -A && git commit -m "T###: <task description>"`.
+7. `git add -A && git commit -m "T###: <task description>"` — if `CLAUDE_GH_APP_SLUG` and `CLAUDE_GH_APP_ID` are set
+   (bot identity configured), instead commit as the bot:
+   `git -c user.name="${CLAUDE_GH_APP_SLUG}[bot]" -c user.email="${CLAUDE_GH_APP_ID}+${CLAUDE_GH_APP_SLUG}[bot]@users.noreply.github.com" commit -m "T###: <task description>"`.
 
 8. `git push -u origin <branch>`.
 

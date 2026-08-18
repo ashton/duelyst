@@ -18,6 +18,12 @@ for the next task (that stays a manual, separate step by design).
 
 ## Outline
 
+0. **Bot identity (optional).** If `CLAUDE_GH_APP_ID`, `CLAUDE_GH_APP_INSTALLATION_ID`, and `CLAUDE_GH_APP_PRIVATE_KEY_PATH` are
+   all set, run `export GH_TOKEN="$(.specify/scripts/bash/gh-app-token.sh)"` so every `gh`/`gh api` call
+   below (and `CLAUDE_GH_APP_SLUG` for the fix commit in step 3d) authenticates/attributes as the GitHub App's bot
+   identity instead of the locally logged-in personal account. If any are unset, skip silently and fall back
+   to the current `gh auth` session and default `git` commit identity.
+
 1. Resolve `FEATURE_DIR` via `.specify/scripts/bash/check-prerequisites.sh --json --paths-only`; let
    `feature-slug` = `basename "$FEATURE_DIR"`. Resolve the GitHub repo via
    `git config --get remote.origin.url` (must be a GitHub remote; abort if not, same check
@@ -51,7 +57,9 @@ for the next task (that stays a manual, separate step by design).
       - Make the requested change(s) directly on that branch — read the comment(s) carefully, locate the
         referenced file/line, and fix exactly what was asked; re-run whatever test/build command is
         relevant to confirm the fix (mirror what the original task's PR verification used).
-      - `git add -A && git commit -m "Address review feedback on <task-id>"`.
+      - `git add -A && git commit -m "Address review feedback on <task-id>"` — if `CLAUDE_GH_APP_SLUG` and
+        `CLAUDE_GH_APP_ID` are set (bot identity configured), instead commit as the bot:
+        `git -c user.name="${CLAUDE_GH_APP_SLUG}[bot]" -c user.email="${CLAUDE_GH_APP_ID}+${CLAUDE_GH_APP_SLUG}[bot]@users.noreply.github.com" commit -m "Address review feedback on <task-id>"`.
       - `git push` (updates the same open PR — never open a new one here).
       - Report what was changed and that the PR was updated.
 
