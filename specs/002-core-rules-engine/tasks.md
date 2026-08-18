@@ -31,7 +31,7 @@ rule is written as a failing Expecto test (or FsCheck property) before its imple
 - [X] T001 Create `tests/Duelyst.Core.Tests/Duelyst.Core.Tests.fsproj` (Expecto + FsCheck, references
   `src/Duelyst.Core/Duelyst.Core.fsproj`) and a minimal `tests/Duelyst.Core.Tests/Program.fs` Expecto
   entry point
-- [ ] T002 Add `tests/Duelyst.Core.Tests/Duelyst.Core.Tests.fsproj` and confirm
+- [X] T002 Add `tests/Duelyst.Core.Tests/Duelyst.Core.Tests.fsproj` and confirm
   `src/Duelyst.Core/Duelyst.Core.fsproj` are both wired into `Duelyst.sln`
 - [ ] T003 Confirm `dotnet build Duelyst.sln` and `dotnet test tests/Duelyst.Core.Tests` both run
   (0 tests, green) before any rule code is written
