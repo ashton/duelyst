@@ -9,6 +9,11 @@
   <ItemGroup>
     <Compile Include="RngTests.fs" />
     <Compile Include="GameStateTests.fs" />
+    <Compile Include="SummonTests.fs" />
+    <Compile Include="MoveTests.fs" />
+    <Compile Include="AttackTests.fs" />
+    <Compile Include="WinConditionTests.fs" />
+    <Compile Include="ScriptedMatchHarness.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

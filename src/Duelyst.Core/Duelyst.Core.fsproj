@@ -6,6 +6,8 @@
     <Compile Include="Rules.fs" />
     <Compile Include="Actions.fs" />
     <Compile Include="GameState.fs" />
+    <Compile Include="Board.fs" />
+    <Compile Include="Pipeline.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 

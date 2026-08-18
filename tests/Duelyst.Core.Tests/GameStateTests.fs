@@ -3,6 +3,8 @@ module Duelyst.Core.Tests.GameStateTests
 open Expecto
 open Duelyst.Core.Types
 open Duelyst.Core.GameState
+open Duelyst.Core.Actions
+open Duelyst.Core.Pipeline
 
 let private sampleDeck (n: int) : CardId list = [ for i in 1..n -> CardId i ]
 
@@ -86,3 +88,59 @@ let tests =
               let handA = gsA.Players.[PlayerId 0].Hand
               let handB = gsB.Players.[PlayerId 0].Hand
               Expect.notEqual handA handB "different seeds should (almost certainly) deal different hands" ]
+
+[<Tests>]
+let turnCycleTests =
+    testList
+        "Turn cycle (mana ramp via StartTurn/Refresh, mulligan)"
+        [ testCase "ending a turn ramps the next player's mana cap by 1 and refills mana to cap"
+          <| fun _ ->
+              let gs = init 1UL (p1Setup (sampleDeck 20)) (p2Setup (sampleDeck 20))
+
+              match step gs (EndTurn(PlayerId 0)) with
+              | Error e -> failtestf "expected Ok, got Error %A" e
+              | Ok(gs', _) ->
+                  let p1 = gs'.Players.[PlayerId 1]
+                  Expect.equal p1.ManaCap (Duelyst.Core.Rules.StartingMana + 1) "manaCap should ramp by 1"
+                  Expect.equal p1.Mana p1.ManaCap "mana should refill to the new cap"
+
+          testCase "mana cap never exceeds Rules.MaxMana even after many turns"
+          <| fun _ ->
+              let gs0 = init 1UL (p1Setup (sampleDeck 40)) (p2Setup (sampleDeck 40))
+
+              let rec playTurns (gs: GameState) (n: int) : GameState =
+                  if n = 0 then
+                      gs
+                  else
+                      match step gs (EndTurn gs.ActivePlayer) with
+                      | Ok(gs', _) -> playTurns gs' (n - 1)
+                      | Error e -> failtestf "unexpected Error %A on turn %d" e n
+
+              let gsFinal = playTurns gs0 30
+
+              for kv in gsFinal.Players do
+                  Expect.isLessThanOrEqual kv.Value.ManaCap Duelyst.Core.Rules.MaxMana "manaCap must not exceed MaxMana"
+
+          testCase "mulligan replaces up to MulliganReplaceCount cards, keeping hand size the same"
+          <| fun _ ->
+              let gs = init 1UL (p1Setup (sampleDeck 20)) (p2Setup (sampleDeck 20))
+              let p1 = gs.Players.[PlayerId 0]
+              let toReplace = p1.Hand |> List.truncate Duelyst.Core.Rules.MulliganReplaceCount
+
+              match step gs (Mulligan(PlayerId 0, toReplace)) with
+              | Error e -> failtestf "expected Ok, got Error %A" e
+              | Ok(gs', _) ->
+                  let p1' = gs'.Players.[PlayerId 0]
+                  Expect.equal (List.length p1'.Hand) (List.length p1.Hand) "hand size should stay the same after mulligan"
+
+          testCase "mulligan rejects replacing more than MulliganReplaceCount cards"
+          <| fun _ ->
+              let gs = init 1UL (p1Setup (sampleDeck 20)) (p2Setup (sampleDeck 20))
+              let p1 = gs.Players.[PlayerId 0]
+              let tooMany = p1.Hand |> List.truncate (Duelyst.Core.Rules.MulliganReplaceCount + 1)
+
+              match step gs (Mulligan(PlayerId 0, tooMany)) with
+              | Error(TooManyMulligans(requested, allowed)) ->
+                  Expect.equal requested (List.length tooMany) "requested count should match"
+                  Expect.equal allowed Duelyst.Core.Rules.MulliganReplaceCount "allowed count should match Rules"
+              | other -> failtestf "expected Error TooManyMulligans, got %A" other ]
